@@ -10,19 +10,21 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
-    private final UserService users;
+    private final UserService userService;
 
-    public UserController(UserService users) { this.users = users; }
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @PostMapping
     public UserView create(@Valid @RequestBody CreateUserRequest req) {
-        User u = users.create(req.username(), req.email());
+        User u = userService.create(req.username(), req.email());
         return modelToDto(u);
     }
 
     @GetMapping("/{id}")
     public UserView getById(@PathVariable Long id) {
-        return modelToDto(users.getById(id));
+        return modelToDto(userService.getById(id));
     }
 
     private UserView modelToDto(User u) {
