@@ -7,6 +7,7 @@ export function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<div>Hello World!</div>} />
+          <Route path="/following" element={<div>Following</div>} />
           <Route path="/account" element={<div>Account</div>} />
           <Route path="/settings" element={<div>Settings</div>} />
         </Route>
