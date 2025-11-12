@@ -1,5 +1,3 @@
-// src/pages/Home.tsx
-import { Link } from 'react-router-dom';
 import { StyledCard } from '../components/StyledCard';
 
 export function Home() {
@@ -17,24 +15,16 @@ export function Home() {
       </div>
 
       {/* Justified rows: 6 cols, fixed row height */}
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-6 auto-rows-[260px]">
+      <div className="grid auto-rows-[260px] grid-cols-1 gap-4 md:grid-cols-6">
         {/* ROW 1 (6 cols total) */}
-        <StyledCard
-          title="AI Summary (Last 15 Minutes)"
-          className="md:col-span-4 h-full"
-          right={
-            <button className="text-xs text-blue-400 hover:text-blue-300 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-500/40 rounded">
-              Regenerate
-            </button>
-          }
-        >
+        <StyledCard title="AI Summary (Last 15 Minutes)" className="h-full md:col-span-4">
           <div className="space-y-2 text-base leading-6">
             <p>
               Light rail delays easing; I-5 northbound collision still causing backups at Mercer.
-              Council pushes transit priority downtown. Expect showers this evening; AQI remains good.
-              Mariners add pitching depth.
+              Council pushes transit priority downtown. Expect showers this evening; AQI remains
+              good. Mariners add pitching depth.
             </p>
-            <ul className="list-disc pl-5 text-neutral-300 text-sm">
+            <ul className="list-disc pl-5 text-sm text-neutral-300">
               <li>Transit: minor Link delays; I-5 clearing</li>
               <li>Weather: scattered showers; good AQI</li>
               <li>Civics: downtown transit priority</li>
@@ -46,14 +36,16 @@ export function Home() {
           </div>
         </StyledCard>
 
-        <StyledCard title="Current Weather & AQI" className="md:col-span-2 h-full">
+        <StyledCard title="Current Weather & AQI" className="h-full md:col-span-2">
           <div className="flex items-end gap-4">
             <div>
               <div className="text-4xl font-black">52°</div>
               <div className="text-neutral-400">Partly cloudy · Wind 7 mph</div>
             </div>
             <div className="ml-auto text-right">
-              <div className="text-sm">AQI: <span className="font-medium text-green-400">38 · Good</span></div>
+              <div className="text-sm">
+                AQI: <span className="font-medium text-green-400">38 · Good</span>
+              </div>
               <div className="text-xs text-neutral-500">Downtown · 10 min ago</div>
             </div>
           </div>
@@ -66,33 +58,43 @@ export function Home() {
         </StyledCard>
 
         {/* ROW 2 (6 cols total) */}
-        <StyledCard title="Transportation Updates" className="md:col-span-2 h-full">
+        <StyledCard title="Transportation Updates" className="h-full md:col-span-2">
           <ul className="space-y-2">
             <li className="flex items-start justify-between">
               <div>
                 <div className="font-medium">I-5 North — collision at Mercer</div>
-                <div className="text-xs text-neutral-500">Lanes 1–2 blocked · 8 mins ago · WSDOT</div>
+                <div className="text-xs text-neutral-500">
+                  Lanes 1–2 blocked · 8 mins ago · WSDOT
+                </div>
               </div>
-              <span className="rounded-full bg-yellow-500/20 px-2 py-0.5 text-xs text-yellow-300">Delay</span>
+              <span className="rounded-full bg-yellow-500/20 px-2 py-0.5 text-xs text-yellow-300">
+                Delay
+              </span>
             </li>
             <li className="flex items-start justify-between">
               <div>
                 <div className="font-medium">Link Light Rail — minor delays</div>
-                <div className="text-xs text-neutral-500">Operational · 5 mins ago · Sound Transit</div>
+                <div className="text-xs text-neutral-500">
+                  Operational · 5 mins ago · Sound Transit
+                </div>
               </div>
-              <span className="rounded-full bg-orange-500/20 px-2 py-0.5 text-xs text-orange-300">Alert</span>
+              <span className="rounded-full bg-orange-500/20 px-2 py-0.5 text-xs text-orange-300">
+                Alert
+              </span>
             </li>
             <li className="flex items-start justify-between">
               <div>
                 <div className="font-medium">Route 8 — next arrival 7 min (Denny & Westlake)</div>
                 <div className="text-xs text-neutral-500">ETA 7:14 PM · OneBusAway</div>
               </div>
-              <span className="rounded-full bg-green-500/20 px-2 py-0.5 text-xs text-green-300">OK</span>
+              <span className="rounded-full bg-green-500/20 px-2 py-0.5 text-xs text-green-300">
+                OK
+              </span>
             </li>
           </ul>
         </StyledCard>
 
-        <StyledCard title="Recent Local News" className="md:col-span-2 h-full">
+        <StyledCard title="Recent Local News" className="h-full md:col-span-2">
           <ul className="space-y-2">
             <li>
               <a className="font-medium hover:underline" href="#" target="_blank" rel="noreferrer">
@@ -115,11 +117,7 @@ export function Home() {
           </ul>
         </StyledCard>
 
-        <StyledCard
-          title="Reddit Discussions"
-          className="md:col-span-2 h-full"
-          right={<Link to="/" className="text-xs text-blue-400 hover:underline">View all</Link>}
-        >
+        <StyledCard title="Reddit Discussions" className="h-full md:col-span-2">
           <ul className="space-y-3">
             <li>
               <a href="#" className="font-medium hover:underline" target="_blank" rel="noreferrer">
@@ -143,7 +141,7 @@ export function Home() {
         </StyledCard>
 
         {/* ROW 3 (6 cols total) */}
-        <StyledCard title="Seattle Joke" className="md:col-span-2 h-full">
+        <StyledCard title="Seattle Joke" className="h-full md:col-span-2">
           <blockquote className="italic">
             “In Seattle we don’t tan—we just develop different shades of ‘partly cloudy.’”
           </blockquote>
@@ -151,7 +149,7 @@ export function Home() {
         </StyledCard>
 
         {/* Placeholder for future card (keeps row justified) */}
-        <StyledCard title="Coming Soon" className="md:col-span-4 h-full">
+        <StyledCard title="Coming Soon" className="h-full md:col-span-4">
           <p className="text-sm text-neutral-300">
             Add a “Live Events”, “UW Feed”, or “Outages” panel here to keep rows perfectly aligned.
           </p>
