@@ -3,8 +3,8 @@ import { WIP } from '../components/WIP';
 
 export function Home() {
   return (
-    <div className="mx-auto w-full max-w-7xl p-4 md:p-6">
-      <h1 className="mb-4 text-2xl font-bold text-neutral-100">Last updated: just now</h1>
+    <div className="mx-auto w-full max-w-7xl p-4 md:p-6 md:pt-4">
+      <h1 className="mb-4 text-2xl font-bold text-neutral-100">Last updated: Just Now</h1>
 
       {/* 3x3 dashboard */}
       <div className="grid auto-rows-[minmax(240px,1fr)] grid-cols-1 gap-4 md:grid-cols-3">
@@ -73,38 +73,17 @@ export function Home() {
         </WIP>
 
         {/* Row 2 */}
-        <StyledCard title="Current Weather & AQI" className="h-full">
+        <StyledCard title="Current Weather" className="h-full">
           <div className="flex items-end gap-4">
             <div>
               <div className="text-4xl font-black">52°</div>
               <div className="text-neutral-400">Partly cloudy · Wind 7 mph</div>
             </div>
-            <div className="ml-auto text-right">
-              <div className="text-sm">
-                AQI: <span className="font-medium text-green-400">38 · Good</span>
-              </div>
-              <div className="text-xs text-neutral-500">Downtown · 10 min ago</div>
-            </div>
           </div>
           <hr className="my-3 border-neutral-800" />
           <ul className="text-sm leading-6 text-neutral-300">
-            <li>Next hour: light showers likely</li>
-            <li>Tonight: low 44°, breezy</li>
-            <li>Tomorrow: high 55°, scattered rain</li>
+            <li>Won't rain today</li>
           </ul>
-        </StyledCard>
-
-        <StyledCard title="Rain / Umbrella Index ☂️" className="h-full">
-          <div className="mb-2 flex items-center justify-between">
-            <span className="text-5xl">🌧️</span>
-            <div className="text-right">
-              <div className="text-xl font-semibold text-blue-400">Umbrella Required</div>
-              <div className="text-xs text-neutral-500">
-                85% chance you’ll regret not bringing one
-              </div>
-            </div>
-          </div>
-          <p>Light rain expected most of the day. Winds increasing in the afternoon.</p>
         </StyledCard>
 
         {/* Row 3 */}
