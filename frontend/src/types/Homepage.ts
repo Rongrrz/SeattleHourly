@@ -19,10 +19,9 @@ export type TransportationStatus = {
 };
 
 export type WeatherSummary = {
-  temperature: string;
-  description: string;
-  wind: string;
-  rain: string;
+  temperature: number;
+  wind: number;
+  rainChance: number;
 };
 
 export type Mood = {

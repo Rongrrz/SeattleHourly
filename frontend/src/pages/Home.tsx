@@ -1,3 +1,4 @@
+import { Weather } from '../components/cards/Weather';
 import { StyledCard } from '../components/StyledCard';
 import { WIP } from '../components/WIP';
 
@@ -73,18 +74,7 @@ export function Home() {
         </WIP>
 
         {/* Row 2 */}
-        <StyledCard title="Current Weather" className="h-full">
-          <div className="flex items-end gap-4">
-            <div>
-              <div className="text-4xl font-black">52°</div>
-              <div className="text-neutral-400">Partly cloudy · Wind 7 mph</div>
-            </div>
-          </div>
-          <hr className="my-3 border-neutral-800" />
-          <ul className="text-sm leading-6 text-neutral-300">
-            <li>Won't rain today</li>
-          </ul>
-        </StyledCard>
+        <Weather />
 
         {/* Row 3 */}
         <WIP>
