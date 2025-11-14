@@ -3,14 +3,14 @@ import type { TransportationStatus } from "../types/Homepage";
 
 export const transportAtom = atom<TransportationStatus[]>([
   {
-    title: 'I-5 North — collision at Mercer',
-    details: 'Lanes 1–2 blocked',
+    title: 'Link Light Rail - IDK',
+    details: 'Hehe',
     badge: 'Delay',
-    source: 'WSDOT',
+    source: 'Sound Transit',
   },
   {
-    title: 'Link Light Rail — minor delays',
-    details: 'Operational',
+    title: 'Link Light Rail — IDK 2',
+    details: 'Hehe 2',
     badge: 'Alert',
     source: 'Sound Transit',
   },

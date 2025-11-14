@@ -3,19 +3,19 @@ import type { RedditPost } from '../types/Homepage';
 
 export const redditPostsAtom = atom<RedditPost[]>([
   {
-    title: 'Best rainproof commuter routes from Capitol Hill?',
+    title: 'Two weeks of straight rain...',
     subreddit: 'r/Seattle',
     comments: 23,
     url: '#',
   },
   {
-    title: 'UW library study spots with actual outlets?',
+    title: 'Best place to study?',
     subreddit: 'r/udub',
     comments: 12,
     url: '#',
   },
   {
-    title: 'Favorite rainy-day café to code in?',
+    title: 'My hot takes on the light-rail',
     subreddit: 'r/SeattleWA',
     comments: 8,
     url: '#',

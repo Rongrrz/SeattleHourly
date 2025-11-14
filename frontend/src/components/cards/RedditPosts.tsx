@@ -7,7 +7,7 @@ export function RedditPosts() {
   const [posts] = useAtom(redditPostsAtom);
 
   return (
-    <StyledCard title="Reddit Discussions" className="h-full">
+    <StyledCard title="Reddit Discussions" className="h-full row-span-2">
       <ul className="space-y-3">
         {posts.map(post => {
           return (

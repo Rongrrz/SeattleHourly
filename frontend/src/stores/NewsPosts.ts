@@ -3,18 +3,13 @@ import type { NewsPost } from "../types/Homepage";
 
 export const newsPostAtom = atom<NewsPost[]>([
   {
-    title: 'City Council advances downtown transit priority plan',
-    source: 'KUOW',
+    title: 'Researchers found out that Christmas is in December',
+    source: 'Best source ever',
     url: '#',
   },
   {
-    title: 'Mariners sign veteran pitcher to one-year deal',
-    source: 'KING 5',
-    url: '#',
-  },
-  {
-    title: 'Rain returns: weekend storm timing and impacts',
-    source: 'Seattle Times',
+    title: 'Mariners unfortunately lost 3:4 :(',
+    source: 'The source',
     url: '#',
   },
 ]);

@@ -1,3 +1,3 @@
 import { atom } from 'jotai';
 
-export const summaryAtom = atom<String>("Very peaceful.");
+export const summaryAtom = atom<String>("A summary waiting to be implemented.");

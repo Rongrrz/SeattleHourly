@@ -4,7 +4,6 @@ import { redditPostsAtom } from './RedditPosts';
 import { weatherAtom } from './Weather';
 import { newsPostAtom } from './NewsPosts';
 import { transportAtom } from './Transportation';
-import { moodAtom } from './Mood';
 
 const lastFetchedAtom = atom<number>(0);
 
@@ -24,7 +23,7 @@ export async function FetchServer(): Promise<void> {
     console.log('[FetchServer] Fetching too frequently!');
     return;
   }
-  
+
   try {
     console.log('[FetchServer] Fetching data…');
 
@@ -33,12 +32,11 @@ export async function FetchServer(): Promise<void> {
     const data = await res.json();
 
     // Update all our atoms...
-    store.set(summaryAtom, data.summary);
     store.set(redditPostsAtom, data.reddit);
     store.set(weatherAtom, data.weather);
     store.set(newsPostAtom, data.news);
     store.set(transportAtom, data.transport);
-    store.set(moodAtom, data.mood);
+    store.set(summaryAtom, data.summary);
 
     // Save time to lastFetched if successful fetch.
     store.set(lastFetchedAtom, Date.now());

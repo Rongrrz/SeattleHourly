@@ -1,5 +1,4 @@
 import { LocalNews } from '../components/cards/LocalNews';
-import { Mood } from '../components/cards/Mood';
 import { RedditPosts } from '../components/cards/RedditPosts';
 import { Summary } from '../components/cards/Summary';
 import { Transportation } from '../components/cards/Transportation';
@@ -13,15 +12,13 @@ export function Home() {
       <div className="grid auto-rows-[minmax(240px,1fr)] grid-cols-1 gap-4 md:grid-cols-3">
         <Summary />
 
-        <RedditPosts />
-
         <Weather />
+
+        <RedditPosts />
 
         <LocalNews />
 
         <Transportation />
-
-        <Mood />
       </div>
     </div>
   );
