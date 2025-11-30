@@ -1,5 +1,6 @@
 package com.seattlehourly.backend.service;
 
+import com.seattlehourly.backend.config.Constants;
 import com.seattlehourly.backend.dto.fetch.NewsArticle;
 import jakarta.annotation.PostConstruct;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -89,8 +90,8 @@ public class NewsService {
         }
 
         articles.sort(Comparator.comparingLong(NewsArticle::createdUtc).reversed());
-        if (articles.size() > 3) {
-            articles = articles.subList(0, 3);
+        if (articles.size() > Constants.NEWS_COUNT) {
+            articles = articles.subList(0, Constants.NEWS_COUNT);
         }
 
         return List.copyOf(articles);

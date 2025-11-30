@@ -43,18 +43,18 @@ public class RedditService {
     }
 
     @Scheduled(fixedRate = 300_000) // 5 minutes per
-    private void updateSeattleClusterPosts() {
-        List<RedditPost> combined = new ArrayList<>();
-        for (String subreddit : Constants.SUBREDDITS) {
-            combined.addAll(fetchSubredditPosts(subreddit, 5));
+        private void updateSeattleClusterPosts() {
+            List<RedditPost> combined = new ArrayList<>();
+            for (String subreddit : Constants.SUBREDDITS) {
+                combined.addAll(fetchSubredditPosts(subreddit, Constants.REDDIT_UNIQUE_COUNT));
+            }
+
+            combined.sort((a, b) -> Long.compare(b.created_utc(), a.created_utc()));
+
+            cachedPosts = combined.stream()
+                    .limit(Constants.REDDIT_COUNT)
+                    .toList();
         }
-
-        combined.sort((a, b) -> Long.compare(b.created_utc(), a.created_utc()));
-
-        cachedPosts = combined.stream()
-                .limit(5)
-                .toList();
-    }
 
     private List<RedditPost> fetchSubredditPosts(String subreddit, int limit) {
         String url = SUBREDDIT_URL.formatted(subreddit, limit);
