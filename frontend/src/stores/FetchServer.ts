@@ -3,7 +3,6 @@ import { summaryAtom } from './Summary';
 import { redditPostsAtom } from './RedditPosts';
 import { weatherAtom } from './Weather';
 import { newsPostAtom } from './NewsPosts';
-import { transportAtom } from './Transportation';
 
 const lastFetchedAtom = atom<number>(0);
 
@@ -35,9 +34,6 @@ export async function FetchServer(): Promise<void> {
     store.set(redditPostsAtom, data.redditPosts);
     store.set(weatherAtom, data.weather);
     store.set(newsPostAtom, data.news);
-    console.log(data.news)
-    console.log(data)
-    // store.set(transportAtom, data.transport);
     // store.set(summaryAtom, data.summary);
 
     // Save time to lastFetched if successful fetch.

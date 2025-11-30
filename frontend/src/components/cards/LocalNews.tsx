@@ -5,8 +5,9 @@ import { newsPostAtom } from '../../stores/NewsPosts';
 // TODO: Add time ago was the new publish
 export function LocalNews() {
   const [posts] = useAtom(newsPostAtom);
+  
   return (
-    <StyledCard title="Local News" className="h-full">
+    <StyledCard title="Local News" className="h-full row-span-2">
       <ul className="space-y-2">
         {posts.map(post => {
           return (
