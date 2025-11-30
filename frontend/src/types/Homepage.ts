@@ -11,13 +11,6 @@ export type NewsPost = {
   url: string;
 };
 
-export type TransportationStatus = {
-  title: string;
-  details: string;
-  badge: 'Delay' | 'Alert' | 'OK';
-  source: string;
-};
-
 export type WeatherSummary = {
   temperature: number;
   windMPH: number;
