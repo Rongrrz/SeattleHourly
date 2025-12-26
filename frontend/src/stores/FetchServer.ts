@@ -5,7 +5,6 @@ import { newsPostAtom } from './NewsPosts';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-
 const lastFetchedAtom = atom<number>(0);
 
 const store = getDefaultStore();
