@@ -19,7 +19,7 @@ export function App() {
   }, []);
 
   return (
-    <BrowserRouter basename="/SeattleHourly">
+    <BrowserRouter basename="/">
       <div className="flex min-h-screen flex-col bg-neutral-950 text-neutral-100">
         <Navbar />
 
