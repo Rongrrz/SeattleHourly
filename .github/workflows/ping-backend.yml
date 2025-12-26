@@ -10,6 +10,7 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping backend
+      - name: ping backend
         run: |
-          curl -s https://seattlehourly.onrender.com/api/fetch/ping
+          echo "Pinging backend..."
+          curl https://seattlehourly.onrender.com/api/fetch/ping
