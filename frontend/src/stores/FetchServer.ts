@@ -3,6 +3,9 @@ import { redditPostsAtom } from './RedditPosts';
 import { weatherAtom } from './Weather';
 import { newsPostAtom } from './NewsPosts';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+
 const lastFetchedAtom = atom<number>(0);
 
 const store = getDefaultStore();
@@ -25,7 +28,7 @@ export async function FetchServer(): Promise<void> {
   try {
     console.log('[FetchServer] Fetching data…');
 
-    const res = await fetch('http://localhost:8080/api/fetch');
+    const res = await fetch(`${API_BASE_URL}/api/fetch`);
     const data = await res.json();
     // console.log(data);
 
