@@ -1,5 +1,4 @@
 import { atom, getDefaultStore } from 'jotai';
-import { summaryAtom } from './Summary';
 import { redditPostsAtom } from './RedditPosts';
 import { weatherAtom } from './Weather';
 import { newsPostAtom } from './NewsPosts';
