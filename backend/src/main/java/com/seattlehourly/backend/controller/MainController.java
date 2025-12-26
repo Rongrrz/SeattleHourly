@@ -32,4 +32,13 @@ public class MainController {
                 weatherService.getSummary()
         );
     }
+
+    /**
+     * For GitHub Workflows to ping every once in a while
+     * to prevent the backend from going to sleep.
+     */
+    @GetMapping("/ping")
+    public String ping() {
+        return "ok";
+    }
 }
