@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Ping backend
         run: |
-          curl -s https://YOUR-BACKEND.onrender.com/api/fetch/ping
+          curl -s https://seattlehourly.onrender.com/api/fetch/ping
