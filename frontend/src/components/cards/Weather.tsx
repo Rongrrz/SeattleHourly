@@ -13,7 +13,8 @@ export function Weather() {
           </div>
           {/* <div className="text-neutral-400">Wind: {weather.windMPH} miles per hour</div> */}
         </div>
-      {/* </div>
+      </div>
+      {/*
       <hr className="my-3 border-neutral-800" />
       <ul className="text-sm leading-6 text-neutral-300">
         <li>{weather.rainChance}% to rain</li>
