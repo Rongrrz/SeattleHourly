@@ -9,5 +9,6 @@ import java.util.List;
 public record FetchResponse(
         List<RedditPost> redditPosts,
         List<NewsArticle> news,
-        WeatherSummary weather
+        // Weather disabled
+        // WeatherSummary weather
 ) { }

@@ -1,6 +1,5 @@
 import { atom, getDefaultStore } from 'jotai';
 import { redditPostsAtom } from './RedditPosts';
-import { weatherAtom } from './Weather';
 import { newsPostAtom } from './NewsPosts';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
@@ -33,8 +32,8 @@ export async function FetchServer(): Promise<void> {
 
     // Update all our atoms...
     store.set(redditPostsAtom, data.redditPosts);
-    store.set(weatherAtom, data.weather);
     store.set(newsPostAtom, data.news);
+    // store.set(weatherAtom, data.weather);
     // store.set(summaryAtom, data.summary);
 
     // Save time to lastFetched if successful fetch.
