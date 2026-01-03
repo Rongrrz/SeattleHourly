@@ -28,8 +28,8 @@ public class MainController {
     public FetchResponse fetchDashboard() {
         return new FetchResponse(
                 redditService.getPosts(),
-                newsService.getNews(),
-                weatherService.getSummary()
+                newsService.getNews()
+                // weatherService.getSummary()
         );
     }
 
