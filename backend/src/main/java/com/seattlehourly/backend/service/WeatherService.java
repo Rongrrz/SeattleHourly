@@ -32,6 +32,7 @@ public class WeatherService {
         updateSummary();
     }
 
+    // Disable any updates to the weather, keep it null.
     @Scheduled(fixedRate = 300_000)
     public void updateSummary() {
         // Do nothing because backend-hosting causes IP conflicts in terms
