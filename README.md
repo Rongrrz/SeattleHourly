@@ -6,7 +6,6 @@ I've always thought that it'd be cool if early in the morning, rather than going
 I also thought that this project would be a very good demonstration of the usefulness of state-management libraries, and the skills I've gained through trying to work with them when I was making Roblox games. (Thank you, Roblox TypeScript & Charm)
 
 ## On the Works:
-- 🙉 AI Summary
-- 🔢 Integration with database (thinking postgreSQL) to cache a few days back, for even more "Overseering"
-- 🎵 Discord Bot(?)
-- 🍎 Mobile App
+- ⛈️ Fix the Weather feature
+- 🤖 AI Summary
+- 🚶 Migrate backend from Render -> Vercel(?) 
