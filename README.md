@@ -7,5 +7,6 @@ I also thought that this project would be a very good demonstration of the usefu
 
 ## On the Works:
 - ⛈️ Fix the Weather feature
-- 🤖 AI Summary
+- 🧑‍🤝‍🧑 Fix the Reddit feature
+- 🤖 Integrate AI Summary
 - 🚶 Migrate backend from Render -> Vercel(?) 
